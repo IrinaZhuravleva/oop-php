@@ -30,10 +30,10 @@ $username = htmlentities($username);
 $password = htmlentities($password);
 //пересмотреть мастер-класс и исправить то, что надо
 // $username = $db->quote ($username);
-$username = strtr($username, array('_' => '\_', '%' => '\%'));
+$username = strtr($username, array('_' => '\_', '%' => '\%', '\'' => '\'\''));
 
 // $password = $db->quote ($password);
-$password = strtr($password, array('_' => '\_', '%' => '\%'));
+$password = strtr($password, array('_' => '\_', '%' => '\%', '\'' => '\'\''));
 
 
 $sql = "SELECT * FROM users WHERE name ='{$username}' AND password = '{$password}' LIMIT 1";

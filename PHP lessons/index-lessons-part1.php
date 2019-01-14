@@ -49,19 +49,5 @@ while ($result->fetch()) {
 	echo '<hr />';
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 
